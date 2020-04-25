@@ -48,11 +48,11 @@ syntax on
 let mapleader=","
 set timeout timeoutlen=1500
 
-" ================ Turn Off Swap Files ==============
+" ================ Turn Off Swap Files =============={{{
 
 set noswapfile
 set nobackup
-set nowb
+set nowb"}}}
 
 " Persistent undo ---------------------- {{{
 " Keep undo history across sessions, by storing in file.
@@ -130,20 +130,22 @@ vnoremap <Space> zf
 " }}}
 
 
-
 "
-" ================ Scrolling ========================
+" ================ Scrolling ========================{{{
 
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
-set sidescroll=1
+set sidescroll=1"}}}
 
-" ================ Search ===========================
-
+" ================ Search ==========================={{{
 set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
-set smartcase       " ...unless we type a capital
+set smartcase       " ...unless we type a capital}}}
+
+" ======= Search Files ======
+set path +=**  " Search down into subfolders
+set wildmenu
 
 " ================ Indentation ======================
 
