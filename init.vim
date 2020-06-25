@@ -6,7 +6,6 @@ source ~/.vim/.vimrc
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'gruvbox-community/gruvbox'
-colorscheme gruvbox
 
 " Nvim browser integration
 " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
@@ -36,6 +35,7 @@ Plug 'mhinz/vim-startify'
 
 call plug#end()
 
+colorscheme gruvbox
 
 if exists('g:vscode')
 else
