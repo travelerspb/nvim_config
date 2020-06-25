@@ -2,6 +2,8 @@ function! s:cocActionsOpenFromSelected(type) abort
   execute 'CocCommand actions.open ' . a:type
 endfunction
 
+let g:coc_global_extensions = ['coc-json', 'coc-explorer', 'coc-eslint', 'coc-solargraph', 'coc-go', 'coc-git']
+
 let g:LanguageClient_serverCommands = {
       \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
       \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
