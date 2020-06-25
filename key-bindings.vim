@@ -1,13 +1,26 @@
+" Use alt + hjkl to resize windows
+nnoremap <M-j>    :resize -2<CR>
+nnoremap <M-k>    :resize +2<CR>
+nnoremap <M-h>    :vertical resize -2<CR>
+nnoremap <M-l>    :vertical resize +2<CR>
 
-" ===================Keymaps============
+" Easy CAPS
+inoremap <c-u> <ESC>viwUi
+nnoremap <c-u> viwU<Esc>
+
+" TAB in general mode will move to text buffer
+nnoremap <TAB> :bnext<CR>
+" SHIFT-TAB will go back
+nnoremap <S-TAB> :bprevious<CR>
+
 " Alternate way to save
 nnoremap <C-s> :w<CR>
 " Alternate way to quit
 nnoremap <C-Q> :wq!<CR>
-
-" Window pane resizing
-nnoremap <silent> <Leader>[ :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> <Leader>] :exe "resize " . (winheight(0) * 2/3)<CR>
+" Use control-c instead of escape
+nnoremap <C-c> <Esc>
+" <TAB>: completion.
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Better tabbing
 vnoremap < <gv
@@ -19,16 +32,16 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+nnoremap <Leader>o o<Esc>^Da
+nnoremap <Leader>O O<Esc>^Da
+
+" Window pane resizing
+nnoremap <silent> <Leader>[ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>] :exe "resize " . (winheight(0) * 2/3)<CR>
+
 nnoremap <leader><space> :noh<cr>
 
-map <C-l> gg=G
-
-" Go to next buffer in normal mode
-nnoremap <TAB> :bnext<CR>
-nnoremap <S-TAB> :bprevious<CR>
-
-" Easy save file
-nnoremap <C-s> :w<CR>
+map <C-S-l> gg=G
 
 map <C-p> :GFiles<CR>
 
