@@ -6,7 +6,7 @@ nnoremap <M-l>    :vertical resize +2<CR>
 
 " Easy CAPS
 inoremap <c-u> <ESC>viwUi
-nnoremap <c-u> viwU<Esc>
+" nnoremap <c-u> viwU<Esc>
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
@@ -16,7 +16,7 @@ nnoremap <S-TAB> :bprevious<CR>
 " Alternate way to save
 nnoremap <C-s> :w<CR>
 " Alternate way to quit
-nnoremap <C-Q> :wq!<CR>
+nnoremap <C-Q> :q<CR>
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
 " <TAB>: completion.
@@ -30,18 +30,18 @@ vnoremap > >gv
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+"nnoremap <C-l> <C-w>l
 
-nnoremap <Leader>o o<Esc>^Da
-nnoremap <Leader>O O<Esc>^Da
-
-" Window pane resizing
-nnoremap <silent> <Leader>[ :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> <Leader>] :exe "resize " . (winheight(0) * 2/3)<CR>
-
-nnoremap <leader><space> :noh<cr>
+nnoremap <leader>n :noh<cr>
 
 map <C-S-l> gg=G
 
 map <C-p> :GFiles<CR>
 
+" Easy Motion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+map mw <Plug>(easymotion-w)
+map mf <Plug>(easymotion-overwin-f)
+" JK motions: Line motions
+map mj <Plug>(easymotion-j)
+map mk <Plug>(easymotion-k)

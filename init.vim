@@ -11,13 +11,19 @@ Plug 'gruvbox-community/gruvbox'
 
 " Nvim browser integration
 " Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 Plug 'rust-lang/rust.vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': ['golang', 'go'] }
 
-Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rails', { 'for': 'ryby' }
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'    " open line in GitHub
+
+Plug 'easymotion/vim-easymotion'
+ 
+Plug 'tpope/vim-dispatch'
+Plug 'radenling/vim-dispatch-neovim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -41,12 +47,12 @@ colorscheme gruvbox
 
 if exists('g:vscode')
 else
-  source ~/.config/nvim/which-key.vim
   source ~/.config/nvim/start-screen.vim
   source ~/.config/nvim/airline.vim
   source ~/.config/nvim/vim-test.vim
   source ~/.config/nvim/key-bindings.vim
   source ~/.config/nvim/coc.vim
   source ~/.config/nvim/linting.vim
+  source ~/.config/nvim/which-key.vim
 endif
 

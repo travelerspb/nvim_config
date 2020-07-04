@@ -12,7 +12,7 @@ let g:which_key_sep = '→'
 
 
 " Not a fan of floating windows for this
-let g:which_key_use_floating_win = 0
+let g:which_key_use_floating_win = 1
 
 " Change the colors if you want
 highlight default link WhichKey          Operator
@@ -28,7 +28,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['b'] = [ ':buffer'                    , 'buffer' ]
-let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
+let g:which_key_map['p'] = [ ':GFiles'                    , 'Git files ' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 
@@ -142,6 +142,13 @@ let g:which_key_map.l = {
       \ 'Z' : [':CocEnable'                          , 'enable CoC'],
       \ }
 
+let g:which_key_map.m = {
+      \ 'name' : 'easymotion' ,
+      \ 'f' : ['<Plug>(easymotion-overwin-f)'                        , 'find symbol'],
+      \ 'j' : ['<Plug>(easymotion-j)'                        , 'lines down'],
+      \ 'k' : ['<Plug>(easymotion-k)'                        , 'lines up'],
+      \ 'w' : ['<Plug>(easymotion-w)'                        , 'word jump'],
+      \}
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
