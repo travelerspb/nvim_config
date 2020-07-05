@@ -9,8 +9,6 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'gruvbox-community/gruvbox'
 
-" Nvim browser integration
-" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 Plug 'rust-lang/rust.vim'
