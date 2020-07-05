@@ -26,11 +26,17 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 vnoremap < <gv
 vnoremap > >gv
 
-" Better window navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-"nnoremap <C-l> <C-w>l
+" Windows navigation
+nnoremap <M-h> <C-w>h
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
+nnoremap <M-l> <C-w>l
+if has('nvim')
+  tnoremap <M-h> <c-\><c-n><c-w>h 
+  tnoremap <M-j> <c-\><c-n><c-w>j 
+  tnoremap <M-k> <c-\><c-n><c-w>k 
+  tnoremap <M-l> <c-\><c-n><c-w>l
+endif
 
 nnoremap <leader>n :noh<cr>
 
@@ -45,3 +51,12 @@ map mf <Plug>(easymotion-overwin-f)
 " JK motions: Line motions
 map mj <Plug>(easymotion-j)
 map mk <Plug>(easymotion-k)
+
+
+" Terminal mode
+if has('nvim') " send esc to switch from insert to normal mode
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <C-v><Esc> <Esc>
+endif
+
+" Float terminal

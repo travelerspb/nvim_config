@@ -17,7 +17,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': ['golang', 'go'] }
 
 Plug 'tpope/vim-rails', { 'for': 'ryby' }
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'   " git commands from vim
 Plug 'tpope/vim-rhubarb'    " open line in GitHub
 
 Plug 'easymotion/vim-easymotion'
@@ -34,6 +34,8 @@ Plug 'vim-test/vim-test' " Tests runner
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'voldikss/vim-floaterm'
+
 Plug 'dense-analysis/ale' " linting
 
 Plug 'liuchengxu/vim-which-key'
@@ -48,6 +50,8 @@ colorscheme gruvbox
 if exists('g:vscode')
 else
   source ~/.config/nvim/start-screen.vim
+  source ~/.config/nvim/floaterm.vim
+  source ~/.config/nvim/terminal_mode.vim
   source ~/.config/nvim/airline.vim
   source ~/.config/nvim/vim-test.vim
   source ~/.config/nvim/key-bindings.vim

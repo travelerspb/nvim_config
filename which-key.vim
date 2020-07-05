@@ -83,7 +83,7 @@ let g:which_key_map.g = {
       \ 'a' : [':Git add .'                        , 'add all'],
       \ 'A' : [':Git add %'                        , 'add current'],
       \ 'b' : [':Git blame'                        , 'blame'],
-      \ 'B' : [':GBrowse'                          , 'browse'],
+      \ 'B' : [':GBrowse'                          , 'browse on GitHub'],
       \ 'c' : [':Git commit'                       , 'commit'],
       \ 'd' : [':Git diff'                         , 'diff'],
       \ 'D' : [':Gdiffsplit'                       , 'diff split'],
@@ -149,6 +149,16 @@ let g:which_key_map.m = {
       \ 'k' : ['<Plug>(easymotion-k)'                        , 'lines up'],
       \ 'w' : ['<Plug>(easymotion-w)'                        , 'word jump'],
       \}
+
+let g:which_key_map.t = {
+      \ 'name' : '+terminal' ,
+      \ ';' : [':FloatermNew'        , 'terminal'],
+      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+      \ 'g' : [':FloatermNew tig'                           , 'git'],
+      \ 'n' : [':FloatermNew node'                              , 'node'],
+      \ 'r' : [':FloatermNew irb'                               , 'Ruby REPL'],
+      \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ }
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")
