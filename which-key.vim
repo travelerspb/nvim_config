@@ -67,6 +67,7 @@ let g:which_key_map.s = {
 " Provide commands(ex-command, <Plug>/<C-W>/<C-d> mapping, etc.) and descriptions for existing mappings
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
+      \ 'a' : ['%bd'       , 'delete all']      ,
       \ '1' : ['b1'        , 'buffer 1']        ,
       \ '2' : ['b2'        , 'buffer 2']        ,
       \ 'd' : ['bd'        , 'delete-buffer']   ,
@@ -94,6 +95,7 @@ let g:which_key_map.g = {
       \ 'j' : ['<Plug>(GitGutterNextHunk)'         , 'next hunk'],
       \ 'k' : ['<Plug>(GitGutterPrevHunk)'         , 'prev hunk'],
       \ 'l' : [':Git log'                          , 'log'],
+      \ 'm' : [':MergetoolToggle'                          , 'Merge toglle'],
       \ 'p' : [':Git push'                         , 'push'],
       \ 'P' : [':Git pull'                         , 'pull'],
       \ 'r' : [':GRemove'                          , 'remove'],
@@ -154,7 +156,7 @@ let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
       \ ';' : [':FloatermNew'        , 'terminal'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
-      \ 'g' : [':FloatermNew tig'                           , 'git'],
+      \ 'g' : [':FloatermNew tig status'                           , 'git'],
       \ 'n' : [':FloatermNew node'                              , 'node'],
       \ 'r' : [':FloatermNew irb'                               , 'Ruby REPL'],
       \ 't' : [':FloatermToggle'                                , 'toggle'],

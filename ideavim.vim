@@ -30,8 +30,10 @@ set idearefactormode=keep
 map <TAB> :action NextTab<CR>
 map <S-TAB> :action PreviousTab<CR>
 
-map <leader>f <Plug>(easymotion-s)
-map <leader>e <Plug>(easymotion-f)
+map mw <Plug>(easymotion-w)
+map mj <Plug>(easymotion-j)
+map mk <Plug>(easymotion-k)
+map mb <Plug>(easymotion-b)
 
 map <leader>d :action Debug<CR>
 map <leader>r :action RenameElement<CR>

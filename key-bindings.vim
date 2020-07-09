@@ -19,6 +19,8 @@ nnoremap <C-s> :w<CR>
 nnoremap <C-Q> :q<CR>
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
+imap jk <Esc>
+
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 

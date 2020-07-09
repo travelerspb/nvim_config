@@ -7,4 +7,5 @@ nmap <silent> t<C-g> :TestVisit<CR>
 
 let test#strategy = "neovim"
 " this to keep tests window open
+let g:test#preserve_screen = 1
 tmap <C-o> <C-\><C-n>

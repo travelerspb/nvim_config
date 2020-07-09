@@ -17,6 +17,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': ['golang', 'go'] }
 Plug 'tpope/vim-rails', { 'for': 'ryby' }
 Plug 'tpope/vim-fugitive'   " git commands from vim
 Plug 'tpope/vim-rhubarb'    " open line in GitHub
+Plug 'samoshkin/vim-mergetool'
 
 Plug 'easymotion/vim-easymotion'
  
