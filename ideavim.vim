@@ -27,6 +27,9 @@ set ideastatusicon=gray
 set idearefactormode=keep
 
 """ Mappings --------------------------------
+imap <TAB> :action PopupMenu-selectNext<CR>
+map <C-c> :action HideActiveWindow<CR>
+
 map <TAB> :action NextTab<CR>
 map <S-TAB> :action PreviousTab<CR>
 
@@ -36,7 +39,7 @@ map mk <Plug>(easymotion-k)
 map mb <Plug>(easymotion-b)
 
 map <leader>d :action Debug<CR>
-map <leader>r :action RenameElement<CR>
+map <leader>r :action RunClass<CR>
 map <leader>c :action Stop<CR>
 map <leader>z :action ToggleDistractionFreeMode<CR>
 
@@ -47,3 +50,13 @@ map <S-Space> :action GotoNextError<CR>
 
 map <leader>b :action ToggleLineBreakpoint<CR>
 map <leader>o :action FileStructurePopup<CR>
+
+" Git
+map <leader>gb :action Annotate<CR>
+
+" Tests 
+map <leader>tr :action RerunFailedTests<CR>
+map <leader>tf :action RunClass<CR>
+
+" Refactor
+"map <leader>rr :action Rename<CR>
