@@ -1,6 +1,7 @@
 let g:ale_linters = {
       \   'ruby': ['standardrb', 'rubocop'],
       \   'javascript': ['eslint'],
+      \   'cs': ['OmniSharp']
       \}
 let g:ale_fixers = {
       \    'ruby': ['rubocop'],

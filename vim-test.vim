@@ -9,3 +9,5 @@ let test#strategy = "neovim"
 " this to keep tests window open
 let g:test#preserve_screen = 1
 tmap <C-o> <C-\><C-n>
+
+let test#ruby#rspec#executable = 'RETAILER=psnz RETAIL_BRAND=powershop COUNTRY=nz bundle exec rspec'

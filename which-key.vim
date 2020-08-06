@@ -67,7 +67,8 @@ let g:which_key_map.s = {
 " Provide commands(ex-command, <Plug>/<C-W>/<C-d> mapping, etc.) and descriptions for existing mappings
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
-      \ 'a' : ['%bd'       , 'delete all']      ,
+      \ 'a' : [':%bd'       , 'delete all']      ,
+      \ 'A' : [':%bd|e#'    , 'delete all but current']      ,
       \ '1' : ['b1'        , 'buffer 1']        ,
       \ '2' : ['b2'        , 'buffer 2']        ,
       \ 'd' : ['bd'        , 'delete-buffer']   ,

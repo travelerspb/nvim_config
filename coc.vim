@@ -65,3 +65,6 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap <silent><expr> <c-space> coc#refresh()
 
+"===== Plugins config ======
+let g:OmniSharp_server_use_mono = 1
+let g:OmniSharp_server_stdio = 1

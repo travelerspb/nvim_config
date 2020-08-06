@@ -7,12 +7,17 @@ source ~/.config/nvim/general.vim
 " ========= Plugins =======
 call plug#begin(stdpath('data') . '/plugged')
 
+" Themes
 Plug 'gruvbox-community/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
+Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim
+
 Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': ['golang', 'go'] }
+Plug 'OmniSharp/omnisharp-vim'
 
 Plug 'tpope/vim-rails', { 'for': 'ryby' }
 Plug 'tpope/vim-fugitive'   " git commands from vim
@@ -21,7 +26,7 @@ Plug 'samoshkin/vim-mergetool'
 
 Plug 'easymotion/vim-easymotion'
  
-Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-dispatch' " async tasks
 Plug 'radenling/vim-dispatch-neovim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -41,21 +46,20 @@ Plug 'liuchengxu/vim-which-key'
 
 " Start screen manager
 Plug 'mhinz/vim-startify'
-
 call plug#end()
-
-colorscheme gruvbox
 
 if exists('g:vscode')
 else
   source ~/.config/nvim/start-screen.vim
   source ~/.config/nvim/floaterm.vim
+  source ~/.config/nvim/fzf.vim
   source ~/.config/nvim/terminal_mode.vim
   source ~/.config/nvim/airline.vim
   source ~/.config/nvim/vim-test.vim
   source ~/.config/nvim/key-bindings.vim
   source ~/.config/nvim/coc.vim
   source ~/.config/nvim/linting.vim
+  source ~/.config/nvim/theme.vim
   source ~/.config/nvim/which-key.vim
 endif
 

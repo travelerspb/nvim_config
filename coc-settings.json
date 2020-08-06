@@ -8,5 +8,8 @@
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
- "coc.preferences.currentFunctionSymbolAutoUpdate": true
+ "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+ 
+ "coc.source.OmniSharp.enable" : true,
+ "coc.source.OmniSharp.triggerCharacters": "."
 }
