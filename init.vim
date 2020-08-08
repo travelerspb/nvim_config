@@ -18,6 +18,8 @@ Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim
 Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': ['golang', 'go'] }
 Plug 'OmniSharp/omnisharp-vim'
+" Snippets engine
+" Plug 'SirVer/ultisnips'
 
 Plug 'tpope/vim-rails', { 'for': 'ryby' }
 Plug 'tpope/vim-fugitive'   " git commands from vim
@@ -61,5 +63,6 @@ else
   source ~/.config/nvim/linting.vim
   source ~/.config/nvim/theme.vim
   source ~/.config/nvim/which-key.vim
+  source ~/.config/nvim/omnisharp.vim
 endif
 
