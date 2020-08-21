@@ -39,6 +39,11 @@ if has('nvim')
   tnoremap <M-k> <c-\><c-n><c-w>k 
   tnoremap <M-l> <c-\><c-n><c-w>l
 endif
+" Window pane resizing
+nnoremap <silent> <C-w>s :exe "resize +20"<CR>
+nnoremap <silent> <C-w>w :exe "resize -20"<CR>
+nnoremap <silent> <C-w>d :exe "vertical resize +20"<CR>
+nnoremap <silent> <C-w>a :exe "vertical resize -20"<CR>
 
 nnoremap <leader>n :noh<cr>
 
@@ -61,4 +66,4 @@ if has('nvim') " send esc to switch from insert to normal mode
   tnoremap <C-v><Esc> <Esc>
 endif
 
-" Float terminal
+map <Home> :Startify<CR>

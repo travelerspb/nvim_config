@@ -75,6 +75,13 @@ let g:which_key_map.g = {
       \ 'V' : [':GV!'                              , 'view buffer commits'],
       \ }
 
+" OmniSharp
+let g:which_key_map.o = {
+      \ 'name' : '+OmniSharp' ,
+      \ 'd' : [':OmniSharpDocumentation'       , 'Documentation']      ,
+      \ 's' : [':OmniSharpSignatureHelp'       , 'Signature help']      ,
+      \ }
+
 let g:which_key_map.r = {
       \'name' : '+run',
       \ 't' : {

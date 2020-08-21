@@ -20,6 +20,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': ['golang', 'go'] }
 Plug 'OmniSharp/omnisharp-vim'
 " Snippets engine
 " Plug 'SirVer/ultisnips'
+Plug 'mustache/vim-mustache-handlebars'
 
 Plug 'tpope/vim-rails', { 'for': 'ryby' }
 Plug 'tpope/vim-fugitive'   " git commands from vim
@@ -45,6 +46,8 @@ Plug 'voldikss/vim-floaterm'
 Plug 'dense-analysis/ale' " linting
 
 Plug 'liuchengxu/vim-which-key'
+
+Plug 'cohama/lexima.vim' " Adds closing brackets
 
 " Start screen manager
 Plug 'mhinz/vim-startify'
