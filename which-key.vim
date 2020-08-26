@@ -27,6 +27,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 let g:which_key_map['F2'] = [ ':TestFile'       , 'Test File' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
+let g:which_key_map['f'] = [ ':RnvimrToggle'       , 'Ranger' ]
 let g:which_key_map['p'] = [ ':GFiles'                    , 'Git files ' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
@@ -38,9 +39,10 @@ let g:which_key_map.b = {
       \ 'A' : [':%bd|e#'    , 'delete all but current']      ,
       \ '1' : ['b1'        , 'buffer 1']        ,
       \ '2' : ['b2'        , 'buffer 2']        ,
-      \ 'd' : ['bd'        , 'delete-buffer']   ,
+      \ 'd' : [':bd'        , 'delete-buffer']   ,
+      \ 'D' : [':bd!'        , 'Force del buffer']   ,
       \ 'f' : ['bfirst'    , 'first-buffer']    ,
-      \ 'h' : ['Startify'  , 'home-buffer']     ,
+      \ 'h' : [':Startify'  , 'home-buffer']     ,
       \ 'l' : ['blast'     , 'last-buffer']     ,
       \ 'n' : ['bnext'     , 'next-buffer']     ,
       \ 'p' : ['bprevious' , 'previous-buffer'] ,

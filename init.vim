@@ -1,4 +1,3 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vim/.vimrc
 
@@ -12,6 +11,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'} " ranger file manager 
 
 Plug 'sheerun/vim-polyglot' " A collection of language packs for Vim
 
