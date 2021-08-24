@@ -80,6 +80,8 @@ let g:which_key_map.g = {
 " OmniSharp
 let g:which_key_map.o = {
       \ 'name' : '+OmniSharp' ,
+      \ 'a' : [':OmniSharpGetCodeAction'       , 'Code Action']      ,
+      \ 'f' : [':OmniSharpCodeFormat'       , 'Format']      ,
       \ 'd' : [':OmniSharpDocumentation'       , 'Documentation']      ,
       \ 's' : [':OmniSharpSignatureHelp'       , 'Signature help']      ,
       \ }

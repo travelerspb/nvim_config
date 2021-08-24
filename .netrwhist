@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/nico/dev/nsw-market-adapter'
+let g:netrw_dirhist_4='/Users/nico/dev/sketchy/migrations'
+let g:netrw_dirhist_3='/Users/nico/dev/sketchy/admin-api'
+let g:netrw_dirhist_2='/Users/nico/dev/sketchy/admin-api/app/models'
+let g:netrw_dirhist_1='/Users/nico/dev/sketchy/admin-api/app/models/api'
+let g:netrw_dirhist_0='/Users/nico/dev/sketchy/admin-api/app/models'
+let g:netrw_dirhist_9='/Users/nico/dev/sketchy/admin-api/app'
+let g:netrw_dirhist_8='/Users/nico/dev/sketchy/admin-api'
+let g:netrw_dirhist_7='/Users/nico/dev/sketchy/admin-api/app'
+let g:netrw_dirhist_6='/Users/nico/dev/sketchy/admin-api/app/models'

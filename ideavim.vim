@@ -57,6 +57,8 @@ map <leader>ba :action CloseAllEditors<CR>
 map <leader>bA :action CloseAllEditorsButActive<CR>
 map <leader>bd :action CloseActiveTab<CR>
 map <leader>br :action RecentFiles<CR>
+map <leader>e :action ActivateProjectToolWindow<CR>
+map <leader>f :action ActivateProjectToolWindow<CR>
 
 " Git
 map <leader>gb :action Annotate<CR>
@@ -71,10 +73,10 @@ map <leader>tf :action RunClass<CR>
 map <leader>tr :action RerunFailedTests<CR>
 
 map <leader>tt :action ActivateTerminalToolWindow<CR>
-map <leader>tt :action ActivateTerminalToolWindow<CR>
 
 " Show/Seach
 
+map <leader>st :action SearchEverywhere<CR>
 
 " Refactor
 "map <leader>rr :action Rename<CR>
