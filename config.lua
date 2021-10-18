@@ -5,7 +5,7 @@
 lvim.format_on_save = true
 lvim.colorscheme = "gruvbox"
 
--- NVIM settings
+-- {{{ NVIM Settings
 vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
@@ -49,11 +49,16 @@ vim.opt.spell = false
 vim.opt.spelllang = "en"
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
+--}}}
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<Tab>"] = ":BufferNext<cr>"
+lvim.keys.normal_mode["<S-Tab>"] = ":BufferPrevious<cr>"
+lvim.keys.normal_mode["<Leader>bp"] = ":let @+ = expand('%')<cr>"
+
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = ""
 -- edit a default keymapping
@@ -148,4 +153,5 @@ lvim.autocommands.custom_groups = {
   -- save folds
   { "BufWinEnter", "*.lua", "silent loadview" },
   { "BufWinLeave", "*.lua", "mkview" },
+  { "BufWinEnter", "*.lua", "set foldmethod=marker"}
 }

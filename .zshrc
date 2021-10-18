@@ -1,14 +1,14 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/bin/python3:$PATH
+export PATH=$HOME/.local/bin:$PATH
+export PATH=/usr/local/opt/node@14/bin:$PATH
+export PATH=~/dev/tools:$PATH
+export GITLAB_HOME=$HOME/gitlab
+export GPG_TTY=$TTY
 
-# mysql2
-export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
-
-eval "$(rbenv init -)"
+# export FZF_DEFAULT_COMMAND=lvim $(fzf)
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="/Users/nico/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -51,6 +51,8 @@ ZSH_THEME="ys"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -74,7 +76,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast fasd rails ruby rake)
+plugins=(git gitfast fasd fzf bundler osx rake ruby)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='nvim'
+  export EDITOR='lvim'
 fi
 
 # Compilation flags
@@ -103,7 +105,12 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias n="nvim"
+
+# Editors
+alias lv="lvim"
+alias l="f -e lvim"   # find a file and edit in lvim
+
+
 # ls, the common ones I use a lot shortened for rapid fire usage
 alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
@@ -150,41 +157,39 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-alias tig="tig status"
 
-# Flux aliases
 # Git
-alias sourcetree='open -a SourceTree .'
 alias gitlog='git log --oneline'
-alias grmaster='git rebase origin/master && git push -f'
+alias grmaster='git fetch && git rebase origin/master && git push -f'
 alias gcm="git checkout master && git fetch && git pull --rebase"
+alias gp="git push -u"
+alias gpf="git push -u -f"
+
+alias tig="tig status"
+alias sourcetree='open -a SourceTree .'
  
 # Ruby/Rails-specific
 alias be="bundle exec"
 alias migrate="be rake db:migrate db:test:prepare"
- 
-# Flux
-alias nz='RETAILER=psnz RETAIL_BRAND=powershop COUNTRY=nz be'
-alias nzs='nz spring'
-alias nzsidecar='nz rails s --config=sidecar.ru --port=3001 --pid sidecar.pid'
-alias nzrs='nz be rspec'
- 
-alias merx='RETAIL_BRAND=meridian RETAILER=merx COUNTRY=nz be'
-alias merxs='merx spring'
-alias merxsidecar='merx rails s --config=sidecar.ru --port=3001 --pid sidecar.pid'
- 
-alias au='RETAILER=psau RETAIL_BRAND=powershop COUNTRY=au be'
-alias aut='RAIL_ENV=test RETAILER=psau RETAIL_BRAND=powershop COUNTRY=au be'
-alias aud='RAIL_ENV=development RETAILER=psau RETAIL_BRAND=powershop COUNTRY=au be'
-alias aus='au spring'
-alias ausidecar='au rails s --config=sidecar.ru --port=3001 --pid sidecar.pid'
- 
-alias uk='RETAILER=psuk RETAIL_BRAND=powershop COUNTRY=uk be'
-alias uks='uk spring'
-alias uksidecar='uk rails s --config=sidecar.ru --port=3001 --pid sidecar.pid'
- 
-alias spring_stahp='nzs stop && aus stop && uks stop && merxs stop'
- 
-alias cdcore='cd $HOME/powershop/'
+alias ret="RAILS_ENV=test"
+alias red="RAILS_ENV=development"
 
-export NPM_TOKEN='ADKtcWUjhP_2sAArzDnu'
+# docker and other devs
+alias dcu="docker-compose up -d"
+alias dcd="docker-compose down"
+alias dcs="docker-compose stop"
+
+# Ruby tooling
+alias rubo="bundle exec rubocop -A"
+
+# Added by GDK bootstrap
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:${PKG_CONFIG_PATH}"
+
+# Added by GDK bootstrap
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1 --with-readline-dir=/usr/local/opt/readline"
+
+# Added by GDK bootstrap
+source /Users/nico/.asdf/asdf.sh
+export PATH=$HOME/.asdf/asdf.sh:$PATH
+
+export FZF_COMPLETION_TRIGGER='**'
